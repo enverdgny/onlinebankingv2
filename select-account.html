@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px #000;
+            color: #000;
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .account-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .account-item {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .account-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .account-name {
+            font-weight: bold;
+        }
+
+        .account-type {
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Select Your Account
+        </div>
+        <ul class="account-list">
+            <li class="account-item" onclick="selectAccount('checking')">
+                <span class="account-name">Checking Account</span> - <span class="account-type">Checking</span>
+            </li>
+            <li class="account-item" onclick="selectAccount('deposit')">
+                <span class="account-name">Deposit Account</span> - <span class="account-type">Deposit</span>
+            </li>
+            <!-- Add more account items as needed -->
+        </ul>
+    </div>
+
+    <script>
+        function selectAccount(accountType) {
+            // Redirect to the account details page based on the selected account type
+            if (accountType === 'checking') {
+                window.location.href = 'checking-account.html';
+            } else if (accountType === 'deposit') {
+                window.location.href = 'deposit-account.html';
+            }
+            // Add more conditions for other account types if needed
+        }
+    </script>
+</body>
+</html>

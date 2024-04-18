@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Transfer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .transfer-container {
+            background: #fff;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px #000;
+            color: #000;
+        }
+
+        .transfer-container h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 28px;
+        }
+
+        .input-group {
+            position: relative;
+            margin: 38px 0;
+        }
+
+        .input-group input,
+        .input-group select {
+            border: none;
+            outline: none;
+            background: none;
+            width: 100%;
+            padding: 20px 0;
+            font-size: 20px;
+            border-bottom: 3px solid #000;
+            transition: 0.5s;
+        }
+
+        .input-group span {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            padding: 0 0 10px 5px;
+            pointer-events: none;
+            transition: 0.5s;
+            font-size: 16px;
+        }
+
+        .input-group input:focus~span,
+        .input-group input:valid~span,
+        .input-group select:focus~span,
+        .input-group select:valid~span {
+            transform: translateY(-50%);
+            font-size: 14px;
+            color: #000;
+        }
+
+        .checkbox-group {
+            margin-top: 20px;
+        }
+
+        .checkbox-group label {
+            font-size: 16px;
+        }
+
+        .transfer-btn {
+            width: 100%;
+            padding: 15px 0;
+            font-size: 18px;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 5px;
+            animation: shake2 0.9s infinite alternate;
+        }
+
+        @keyframes shake2 {
+            0% {
+                transform: translateX(-5px);
+            }
+
+            100% {
+                transform: translateX(6px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="transfer-container">
+        <h2>Make Transfer</h2>
+        <div class="input-group">
+
+            <i class="fas fa-user"></i> Sender Account
+
+            <select id="senderAccount" required>
+                <option value="" disabled selected>Select Sender Account</option>
+                <option value="acc1">Account 1</option>
+                <option value="acc2">Account 2</option>
+                <option value="acc3">Account 3</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <input type="text" id="receiverIBAN" required>
+            <span><i class="fas fa-university"></i> Receiver IBAN</span>
+        </div>
+        <div class="input-group">
+
+            <i class="fas fa-money-bill-wave"></i> Currency
+
+            <select id="currency" required>
+                <option value="" disabled selected>Select Currency</option>
+                <option value="TL">Turkish Lira (TL)</option>
+                <option value="DOLLAR">US Dollar (USD)</option>
+                <option value="EURO">Euro (EUR)</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <input type="number" id="amount" min="1" required>
+            <span><i class="fas fa-coins"></i> Amount</span>
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="saveTransaction">
+            <label for="saveTransaction">Save this transaction</label>
+        </div>
+        <button class="transfer-btn">Transfer</button>
+    </div>
+</body>
+
+</html>

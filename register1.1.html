@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px #000;
+            color: #000;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 28px;
+        }
+
+        .input-group {
+            position: relative;
+            margin: 38px 0;
+        }
+
+        .input-group input {
+            border: none;
+            outline: none;
+            background: none;
+            width: 100%;
+            padding: 20px 0;
+            font-size: 20px;
+            border-bottom: 3px solid #000;
+            transition: 0.5s;
+        }
+
+        .input-group span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 0;
+            pointer-events: none;
+            transition: 0.5s;
+            font-size: 16px;
+        }
+
+        .input-group input:focus ~ span,
+        .input-group input:valid ~ span {
+            transform: translateY(-30px);
+            font-size: 14px;
+        }
+
+
+        .register-btn {
+            width: 100%;
+            padding: 15px 0;
+            font-size: 18px;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 5px;
+            animation: shake2 0.9s infinite alternate;
+        }
+        .input-group label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 0;
+            pointer-events: none;
+            transition: 0.5s;
+            font-size: 15px;
+            transform: translateY(-30px);
+        }
+        @keyframes shake {
+            0% {
+                transform: translateX(-1px) translateY(-4px);
+            }
+            100% {
+                transform: translateX(1px) translateY(4px);
+            }
+        }
+        @keyframes shake2 {
+            0% {
+                transform: translateX(-5px);
+            }
+            100% {
+                transform: translateX(6px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Register for Online Banking</h2>
+        <div class="input-group">
+            <input type="text" id="fullname" required>
+            <span><i class="fas fa-user"></i> Full Name</span>
+        </div>
+        <div class="input-group">
+            <input type="email" id="email" required>
+            <span><i class="fas fa-envelope"></i> Email Address</span>
+        </div>
+        <div class="input-group">
+            <input type="tel" id="phone" required>
+            <span><i class="fas fa-phone"></i> Phone Number</span>
+        </div>
+        <div class="input-group">
+            <input type="date" id="dob" required>
+            <label for="dob"><i class="far fa-calendar-alt"></i> Date of Birth</label>
+        </div>
+        <div class="input-group">
+            <input type="text" id="address" required>
+            <span><i class="fas fa-map-marker-alt"></i> Address</span>
+        </div>
+        <div class="input-group">
+            <input type="password" id="password" required>
+            <span for="password"><i class="fas fa-lock"></i> Password</span>
+        </div>
+        <!-- Add more fields as needed (e.g., date of birth, social security number) -->
+        <button class="register-btn">Register</button>
+    </div>
+</body>
+</html>

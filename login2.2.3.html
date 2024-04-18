@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 60px;
+            /* Increased padding */
+            border-radius: 20px;
+            /* Larger border radius */
+            box-shadow: 0px 0px 10px 0px #000;
+            color: #000;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            /* Increased margin */
+            font-size: 28px;
+            /* Larger font size */
+        }
+
+        .input-group {
+            position: relative;
+            margin: 50px 0;
+            /* Increased margin */
+        }
+
+        .input-group input {
+            border: none;
+            outline: none;
+            background: none;
+            width: 100%;
+            padding: 20px 0;
+            /* Increased padding */
+            font-size: 20px;
+            /* Larger font size */
+            border-bottom: 3px solid #000;
+            /* Thicker border */
+            transition: 0.5s;
+            /* Preserve transition effect */
+        }
+
+        .input-group span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 0;
+            /* Increased padding */
+            pointer-events: none;
+            transition: 0.5s;
+            /* Preserve transition effect */
+            font-size: 16px;
+            /* Larger font size */
+        }
+
+        .input-group input:focus~span,
+        .input-group input:valid~span {
+            transform: translateY(-30px);
+            /* Increased translation */
+            font-size: 14px;
+            /* Larger font size */
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 20px 0;
+            /* Increased padding */
+            font-size: 20px;
+            /* Larger font size */
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            border: none;
+            border-radius: 10px;
+            /* Larger border radius */
+            color: #fff;
+            cursor: pointer;
+            margin-bottom: 15px;
+            animation: shake 1.1s infinite alternate;
+            /* Shake animation */
+        }
+
+        .register-btn {
+            width: 100%;
+            padding: 15px 0;
+            /* Smaller padding for the register button */
+            font-size: 18px;
+            /* Slightly smaller font size */
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 5px;
+            /* Add some spacing below the login button */
+            animation: shake2 0.8s infinite alternate;
+        }
+
+        #register-text {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 10px;
+
+        }
+
+        /* Adjust the shake animation for consistency */
+        @keyframes shake {
+            0% {
+                transform: translateX(-1px) translateY(-4px);
+            }
+
+            100% {
+                transform: translateX(1px) translateY(4px);
+            }
+        }
+
+        @keyframes shake2 {
+            0% {
+                transform: translateX(-5px);
+            }
+
+            100% {
+                transform: translateX(6px);
+            }
+        }
+
+        /*@keyframes shake {
+            0% {
+                transform: translateX(-5px);
+                transform: translateY(-4px);
+            }
+            100% {
+                transform: translateX(6px); /* Adjust shake distance 
+                transform: translateY(4px);
+            }
+        }*/
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Online Banking Login</h2>
+        <div class="input-group">
+            <input type="text" required>
+            <span><i class="fas fa-user"></i> Username</span>
+        </div>
+        <div class="input-group">
+            <input type="password" required>
+            <span><i class="fas fa-lock"></i> Password</span>
+        </div>
+        <button class="login-btn">Login</button>
+        <p id="register-text">
+            Don't have an account? Register now.
+        </p>
+        <button class="register-btn">Register</button> <!-- New register button -->
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Existing styles remain unchanged */
+
+        /* New styles for the register button */
+        .register-btn {
+            width: 100%;
+            padding: 15px 0; /* Smaller padding for the register button */
+            font-size: 18px; /* Slightly smaller font size */
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 20px; /* Add some spacing below the login button */
+            animation: shake 1.1s infinite alternate;
+        }
+
+        /* Adjust the shake animation for consistency */
+        @keyframes shake {
+            0% {
+                transform: translateX(-5px) translateY(-4px);
+            }
+            100% {
+                transform: translateX(6px) translateY(4px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Online Banking Login</h2>
+        <div class="input-group">
+            <input type="text" required>
+            <span><i class="fas fa-user"></i> Username</span>
+        </div>
+        <div class="input-group">
+            <input type="password" required>
+            <span><i class="fas fa-lock"></i> Password</span>
+        </div>
+        <button class="login-btn">Login</button>
+        <button class="register-btn">Register</button> 
+        <p style="text-align: center; font-size: 14px; margin-top: 10px;">
+            Don't have an account? Register now.
+        </p>
+    </div>
+</body>
+</html>
+-->

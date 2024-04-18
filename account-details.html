@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px #000;
+            color: #000;
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .account-details {
+            margin-bottom: 20px;
+        }
+
+        .account-details p {
+            margin: 10px 0;
+        }
+
+        .account-details .balance {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .account-details .iban {
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Account Details
+        </div>
+        <div class="account-details">
+            <p><span class="balance">Balance:</span> $1,234.56</p>
+            <p><span class="iban">IBAN:</span> TR12 3456 7890 1234 5678 9012 34</p>
+        </div>
+    </div>
+</body>
+</html>

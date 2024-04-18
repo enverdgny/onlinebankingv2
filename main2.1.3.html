@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBank Online Banking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px #000;
+            color: #000;
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .balance {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .balance p {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .currency-box {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .currency-item {
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            color: #000;
+        }
+
+        .currency-amount {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .currency-label {
+            font-size: 14px;
+        }
+
+        .currency-item:nth-child(1) {
+            background-color: hsl(199, 100%, 89%); /* Light blue for TL */
+        }
+
+        .currency-item:nth-child(2) {
+            background-color: hsl(51, 100%, 87%); /* Light orange for USD */
+        }
+
+        .currency-item:nth-child(3) {
+            background-color: hsl(260, 60%, 89%); /* Light purple for Euro */
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .menu button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .menu button:hover {
+            background-color: #005bbf;
+        }
+
+        .sidebar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .sidebar button:hover {
+            transform: scale(1.1);
+        }
+
+        .last-events {
+            text-align: left;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .last-events h3 {
+            font-size: 20px;
+        }
+
+        .last-events ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .last-events li {
+            margin-bottom: 10px;
+        }
+
+        .last-events .income {
+            color: green;
+        }
+
+        .last-events .outcome {
+            color: red;
+        }
+
+        .total-money {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .total-money span {
+            font-weight: bold;
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Welcome, <span id="fullname">John Doe</span>!
+        </div>
+        <div class="balance">
+            <p>Your account balance:</p>
+            <div class="currency-box">
+                <div class="currency-item">
+                    <span class="currency-amount">1000 TL</span>
+                    <span class="currency-label">Turkish Lira</span>
+                </div>
+                <div class="currency-item">
+                    <span class="currency-amount">3500 USD</span>
+                    <span class="currency-label">US Dollars</span>
+                </div>
+                <div class="currency-item">
+                    <span class="currency-amount">2350 Euro</span>
+                    <span class="currency-label">Euros</span>
+                </div>
+        </div>
+        <div class="menu">
+            <button>Make Transfer</button>
+            <a href="select-account.html"><button>My Accounts</button></a> 
+            <button>Create Account</button>
+        </div>
+        <div class="sidebar">
+            <button>Home</button>
+            <button>Transactions</button>
+            <button>Settings</button>
+        </div>
+        <div class="last-events">
+            <h3>Last Events</h3>
+            <ul>
+                <li class="income">Received 500 TL from John Smith</li>
+                <li class="outcome">Paid 200 USD for Online Shopping</li>
+                <!-- Add more events here -->
+            </ul>
+        </div>
+        <div class="last-events">
+            <h3>Total Income/Outcome</h3>
+            <p>Total Income: <span class="income">1000 TL</span></p>
+            <p>Total Outcome: <span class="outcome">3500 USD</span></p>
+        </div>
+        <div class="total-money">
+            Total Money: <span>₺50.000</span>
+        </div>
+    </div>
+</body>
+</html>
